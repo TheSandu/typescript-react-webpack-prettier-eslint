@@ -1,14 +1,13 @@
 import React from "react";
-import { createStore } from 'redux'
+import {createStore} from "redux";
 
-import counterReducer from "../../reducer"
+import counterReducer from "../../reducer";
 
-let store = createStore(counterReducer);
+const store = createStore(counterReducer);
 
-store.subscribe(() => console.log(store.getState()))
+store.subscribe(() => console.log(store.getState()));
 
 const HelloWorld = () => (
-
     <>
         <h1>Hello World</h1>
 
@@ -26,7 +25,13 @@ const HelloWorld = () => (
         </p>
 
         <p>
-            <button onClick={() => { store.dispatch({ type: 'counter/incremented' }) }}> Increment </button>
+            <button
+                onClick={() => {
+                    store.dispatch({type: "counter/incremented"});
+                }}
+            >
+                Increment
+            </button>
         </p>
     </>
 );

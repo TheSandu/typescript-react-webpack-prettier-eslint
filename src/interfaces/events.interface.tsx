@@ -1,7 +1,7 @@
-export type Events = {
-    type:'counter/incremented' | 'counter/decremented',
+export type IEvents = {
+    type: "counter/incremented" | "counter/decremented";
 };
 
-export type EventsResponse = {
-    value: number,
+export type IEventsResponse = {
+    value: number;
 };
